@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PodNova Integrations & Developer API - Connect your podcast hosting feed to web players, marketing platforms, and automation tools.">
+    <title>Integrations & API | PodNova SaaS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mesh-bg mesh-bg-1"></div>
+    <div class="mesh-bg mesh-bg-2"></div>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-container">
+                <div class="logo-icon">P</div>
+                <span>PodNova</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="home2.html" class="nav-link">Home 2</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="integrations.html" class="nav-link active">Integration</a></li>
+                <li><a href="dashboard.html" class="nav-link">Creator Studio</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn-icon" id="theme-toggle" title="Toggle Theme">☀️</button>
+                <button class="btn-icon" id="rtl-toggle" title="Toggle Layout Direction">⇄</button>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero hero-integrations">
+            <div class="badge">🔌 App Directory</div>
+            <h1>Connect Your Podcast <br><span class="gradient-text">to the Rest of Your Stack</span></h1>
+            <p>Publish to major platforms instantly, sync transcripts to automation nodes, query analytics programmatically, and build custom web interfaces with our API.</p>
+        </section>
+
+        <!-- Category Grid -->
+        <section class="features-section">
+            <div class="section-title">
+                <h2>Our Ecosystem</h2>
+                <p>Plug into your existing content workflow tools and automation triggers.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Spotify -->
+                <div class="feature-card glass-card glass-card-hover">
+                    <div style="font-size:2.5rem; margin-bottom:0.5rem;">🟢</div>
+                    <h3>Spotify for Podcasters</h3>
+                    <p style="font-size:0.85rem; color:var(--text-secondary);">Direct RSS ingestion and automatic episode submission including video podcasts capability.</p>
+                    <span style="font-size:0.75rem; font-weight:700; color:var(--accent);">✓ PRE-INSTALLED</span>
+                </div>
+                <!-- Apple -->
+                <div class="feature-card glass-card glass-card-hover">
+                    <div style="font-size:2.5rem; margin-bottom:0.5rem;">🟣</div>
+                    <h3>Apple Podcasts</h3>
+                    <p style="font-size:0.85rem; color:var(--text-secondary);">Synchronize subscriber-only audio perks directly to Apple Connect dashboard.</p>
+                    <span style="font-size:0.75rem; font-weight:700; color:var(--accent);">✓ PRE-INSTALLED</span>
+                </div>
+                <!-- Descript -->
+                <div class="feature-card glass-card glass-card-hover">
+                    <div style="font-size:2.5rem; margin-bottom:0.5rem;">🎬</div>
+                    <h3>Descript & Riverside</h3>
+                    <p style="font-size:0.85rem; color:var(--text-secondary);">Import high-quality master tracks directly into PodNova storage buckets.</p>
+                    <span style="font-size:0.75rem; font-weight:700; color:var(--primary);">AVAILABLE</span>
+                </div>
+                <!-- Zapier -->
+                <div class="feature-card glass-card glass-card-hover">
+                    <div style="font-size:2.5rem; margin-bottom:0.5rem;">⚡</div>
+                    <h3>Zapier & Webhooks</h3>
+                    <p style="font-size:0.85rem; color:var(--text-secondary);">Trigger automated emails, tweets, or Discord alerts the moment your episode goes live.</p>
+                    <span style="font-size:0.75rem; font-weight:700; color:var(--primary);">AVAILABLE</span>
+                </div>
+                <!-- Mailchimp -->
+                <div class="feature-card glass-card glass-card-hover">
+                    <div style="font-size:2.5rem; margin-bottom:0.5rem;">✉️</div>
+                    <h3>Email Marketing</h3>
+                    <p style="font-size:0.85rem; color:var(--text-secondary);">Sync listener subscription details to Mailchimp, ConvertKit, or ActiveCampaign.</p>
+                    <span style="font-size:0.75rem; font-weight:700; color:var(--primary);">AVAILABLE</span>
+                </div>
+                <!-- WordPress -->
+                <div class="feature-card glass-card glass-card-hover">
+                    <div style="font-size:2.5rem; margin-bottom:0.5rem;">📝</div>
+                    <h3>WordPress & Webflow</h3>
+                    <p style="font-size:0.85rem; color:var(--text-secondary);">Embed custom themed players and publish automated SEO articles from transcripts.</p>
+                    <span style="font-size:0.75rem; font-weight:700; color:var(--primary);">AVAILABLE</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer API Section -->
+        <section class="features-section" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="section-title">
+                <h2>Developer SDK & APIs</h2>
+                <p>Query analytical structures or programmatically publish episodes via our REST APIs.</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:2rem; max-width:1100px; margin: 0 auto; text-align:left;">
+                <div class="glass-card" style="padding:2rem; background: #030712; font-family:monospace; color:#34d399; font-size:0.85rem; border:1px solid rgba(255,255,255,0.08); overflow-x:auto;">
+                    <span style="color:#6b7280;">// Fetch active podcast episodes catalog</span><br>
+                    <span style="color:#f472b6;">const</span> response = <span style="color:#818cf8;">await</span> fetch(<span style="color:#a78bfa;">'https://api.podnova.com/v1/episodes'</span>, {<br>
+                    &nbsp;&nbsp;headers: {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa;">'Authorization'</span>: <span style="color:#a78bfa;">'Bearer YOUR_TOKEN'</span><br>
+                    &nbsp;&nbsp;}<br>
+                    });<br>
+                    <span style="color:#f472b6;">const</span> episodes = <span style="color:#818cf8;">await</span> response.json();<br>
+                    console.log(episodes);
+                </div>
+
+                <div style="display:flex; flex-direction:column; justify-content:center;">
+                    <h3 style="margin-bottom:1rem;">API Features</h3>
+                    <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem; font-size:0.9rem; color:var(--text-secondary);">
+                        <li>⚙️ CORS-enabled REST endpoints for secure client-side integration.</li>
+                        <li>📈 Real-time webhook notifications for player drop-off analytics.</li>
+                        <li>🔒 OAuth 2.0 authorization flows to secure user credentials.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo-container">
+                    <div class="logo-icon">P</div>
+                    <span>PodNova</span>
+                </a>
+                <p class="footer-brand-text">The next-generation SaaS hosting, publishing, AI transcriptions, dynamic ad insertion, and monetization platform for creators.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Product</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">Home</a></li>
+                    <li><a href="home2.html" class="footer-link">Home 2</a></li>
+                    <li><a href="integrations.html" class="footer-link">Integration</a></li>
+                    <li><a href="about.html" class="footer-link">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="dashboard.html" class="footer-link">Creator Studio</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+                    <li><a href="signup.html" class="footer-link">Join Marketplace</a></li>
+                    <li><a href="login.html" class="footer-link">API Keys</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Terms of Service</a></li>
+                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    <li><a href="#" class="footer-link">DMCA Takedowns</a></li>
+                    <li><a href="#" class="footer-link">SLA Guarantee</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p class="footer-brand-text" style="margin-bottom:0.5rem;">Get weekly tips on growing listener engagement and CPM monetization strategies.</p>
+                <div class="newsletter-input-group">
+                    <input type="email" placeholder="your@email.com" class="newsletter-input">
+                    <button class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;" onclick="alert('Thank you for subscribing!');">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <span>&copy; 2026 PodNova SaaS Platform. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

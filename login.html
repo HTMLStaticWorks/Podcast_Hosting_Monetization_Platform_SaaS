@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to PodNova - Access your creator dashboard, stats, and episode manager.">
+    <title>Login | PodNova</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mesh-bg mesh-bg-1"></div>
+    <div class="mesh-bg mesh-bg-2"></div>    <!-- Floating Theme/RTL Controls -->
+    <div style="position: absolute; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.5rem; z-index: 50;">
+        <button class="btn-icon" id="theme-toggle" title="Toggle Theme">☀️</button>
+        <button class="btn-icon" id="rtl-toggle" title="Toggle Layout Direction">⇄</button>
+    </div>
+    <main style="min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 4rem 2rem;">
+        <div class="glass-card" style="padding: 3rem; max-width: 450px; width: 100%; text-align: left;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <a href="index.html" class="logo-container" style="justify-content: center; margin-bottom: 0.5rem; text-decoration:none;">
+                    <div class="logo-icon">P</div>
+                    <span>PodNova</span>
+                </a>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Welcome back! Sign in to access your dashboard.</p>
+            </div>
+
+            <!-- Login Form redirects to dashboard.html -->
+            <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';" style="display:flex; flex-direction:column; gap:1.25rem;">
+                <div>
+                    <label style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">Email Address</label>
+                    <input type="email" required placeholder="you@example.com" class="glass-card" style="width:100%; padding:0.75rem; background:var(--bg-tertiary); color:var(--text-primary); border-color:var(--border-color);">
+                </div>
+                <div>
+                    <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                        <label style="font-size:0.85rem; font-weight:700;">Password</label>
+                        <a href="#" style="font-size:0.8rem; color:var(--primary);">Forgot?</a>
+                    </div>
+                    <input type="password" required placeholder="••••••••" class="glass-card" style="width:100%; padding:0.75rem; background:var(--bg-tertiary); color:var(--text-primary); border-color:var(--border-color);">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Login & Launch Studio 🚀</button>
+            </form>
+            <p style="text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                Don't have an account? <a href="signup.html" style="color: var(--primary); font-weight: 700;">Sign Up</a>
+            </p>
+        </div>
+    </main>
+
+    <footer style="border-top: 1px solid var(--border-color); padding: 4rem 2rem; background: var(--bg-secondary);">
+        <div style="max-width: 1400px; margin: 0 auto; text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+            © 2026 PodNova SaaS Platform. Login Portal.
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
