@@ -15,10 +15,13 @@
     <div class="dashboard-layout">
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
-            <a href="index.html" class="logo-container" style="text-decoration:none;">
-                <div class="logo-icon">P</div>
-                <span>PodNova</span>
-            </a>
+            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+                <a href="index.html" class="logo-container" style="text-decoration:none;">
+                    <div class="logo-icon">P</div>
+                    <span>PodNova</span>
+                </a>
+                <button class="btn-icon sidebar-close" id="sidebar-close" style="width:32px; height:32px; font-size:0.8rem;" title="Close Sidebar">✕</button>
+            </div>
             
             <nav style="flex: 1;">
                 <ul class="sidebar-menu">
@@ -29,20 +32,34 @@
                 </ul>
             </nav>
 
-            <div style="display:flex; flex-direction:column; gap: 1rem; border-top:1px solid var(--border-color); padding-top:1.5rem;">
-                <div style="display:flex; justify-content:space-between; align-items:center;">
-                    <span style="font-size:0.85rem; color:var(--text-secondary);">Direct Toggle</span>
-                    <div style="display:flex; gap:0.5rem;">
-                        <button class="btn-icon" id="theme-toggle" style="width:34px; height:34px; font-size:0.8rem;">☀️</button>
-                        <button class="btn-icon" id="rtl-toggle" style="width:34px; height:34px; font-size:0.8rem;">⇄</button>
-                    </div>
-                </div>
-                <a href="index.html" class="btn btn-secondary" style="font-size:0.85rem; padding:0.5rem 1rem;">Logout</a>
+            <div style="border-top:1px solid var(--border-color); padding-top:1.5rem;">
+                <a href="index.html" class="btn btn-secondary" style="font-size:0.85rem; padding:0.5rem 1rem; width:100%;">Logout</a>
             </div>
         </aside>
 
         <!-- Main Workspace -->
         <main class="main-content">
+            <!-- Dashboard Header (Welcome, Profile, RTL, Theme) -->
+            <header class="dashboard-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2.5rem; flex-wrap:wrap; gap:1rem;">
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <button class="btn-icon sidebar-toggle" id="sidebar-toggle" title="Toggle Sidebar" style="width:40px; height:40px;">☰</button>
+                    <div>
+                        <h1 style="font-size:1.75rem; font-weight:800;">Welcome back, Gayathree! 👋</h1>
+                        <p style="color:var(--text-secondary); font-size:0.9rem;">Here is what's happening with your podcast network today.</p>
+                    </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <!-- Theme and RTL togglers -->
+                    <button class="btn-icon" id="theme-toggle" title="Toggle Theme" style="width:40px; height:40px;">☀️</button>
+                    <button class="btn-icon" id="rtl-toggle" title="Toggle Layout Direction" style="width:40px; height:40px;">⇄</button>
+                    
+                    <!-- User Profile Avatar/Menu -->
+                    <div class="user-profile" style="display:flex; align-items:center; gap:0.75rem; background:var(--glass-bg); border:1px solid var(--border-color); padding:0.5rem 1rem; border-radius:50px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop" alt="User avatar" style="width:32px; height:32px; border-radius:50%; object-fit:cover;">
+                        <span style="font-size:0.85rem; font-weight:600; color:var(--text-primary);">Gayathree</span>
+                    </div>
+                </div>
+            </header>
 
 
             <!-- Stats Overview Cards -->
@@ -105,7 +122,7 @@
                         </div>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 1.5rem;">
+                    <div class="analytics-grid">
                         <!-- Listener demographics -->
                         <div class="glass-card" style="padding: 1.5rem;">
                             <h3 style="font-size:1.1rem; margin-bottom:1rem;">Listener Demographics</h3>
@@ -233,7 +250,7 @@
 
                 <!-- Section 3: Monetization & Ad Insertion -->
                 <div id="monetization-section" class="tab-content">
-                    <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:1.5rem;">
+                    <div class="monetization-grid">
                         
                         <!-- Membership options panel -->
                         <div class="glass-card" style="padding: 2rem;">
