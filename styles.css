@@ -123,9 +123,9 @@ button, input, select, textarea {
     z-index: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .mesh-bg {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -867,7 +867,6 @@ header {
 
 @media (max-width: 768px) {
     .navbar { padding: 1rem; }
-    .nav-links { display: none; }
     .hero h1 { font-size: 2.25rem; }
     .main-content { padding: 1.5rem; }
     .stats-grid { grid-template-columns: 1fr; }
@@ -956,7 +955,7 @@ header {
 
 .footer-social-link:hover {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: #ffffff;
+    color: #ffffff !important;
     border-color: transparent;
     box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
     transform: translateY(-3px) scale(1.08);
@@ -968,6 +967,7 @@ header {
 
 .footer-social-link:hover svg {
     transform: rotate(8deg);
+    fill: #ffffff !important;
 }
 
 [data-theme="light"] .footer-social-link {
@@ -1230,6 +1230,10 @@ header {
     gap: 1.25rem;
 }
 
+.testimonial-card p {
+    flex-grow: 1;
+}
+
 .testimonial-author {
     display: flex;
     align-items: center;
@@ -1294,7 +1298,7 @@ header {
 
 @media (max-width: 992px) {
     .mobile-menu-toggle {
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
     }
@@ -1476,16 +1480,19 @@ header {
 /* Spacing compression for desktop navbar on intermediate screen sizes to prevent overflow/cropping */
 @media (min-width: 993px) and (max-width: 1200px) {
     .nav-links {
-        gap: 1rem !important;
+        gap: 0.75rem !important;
+    }
+    .nav-link {
+        font-size: 0.85rem !important;
     }
     .nav-actions {
-        gap: 0.5rem !important;
+        gap: 0.4rem !important;
     }
     .navbar {
-        padding: 1rem 1.5rem !important;
+        padding: 0.85rem 1.25rem !important;
     }
     .btn {
-        padding: 0.6rem 1.15rem !important;
-        font-size: 0.85rem !important;
+        padding: 0.55rem 1rem !important;
+        font-size: 0.82rem !important;
     }
 }
