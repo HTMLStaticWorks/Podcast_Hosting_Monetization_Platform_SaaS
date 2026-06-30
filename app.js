@@ -1,56 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Theme toggle logic
-    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleBtns = document.querySelectorAll('.theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'dark'; // default dark for modern SaaS styling
     
     document.documentElement.setAttribute('data-theme', currentTheme);
     updateThemeIcon(currentTheme);
 
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
+    themeToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             let theme = document.documentElement.getAttribute('data-theme');
             let newTheme = theme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
         });
-    }
+    });
 
     function updateThemeIcon(theme) {
-        if (!themeToggleBtn) return;
-        if (theme === 'dark') {
-            themeToggleBtn.innerHTML = '☀️'; // Sun icon for light option
-            themeToggleBtn.title = 'Switch to Light Mode';
-        } else {
-            themeToggleBtn.innerHTML = '🌙'; // Moon icon for dark option
-            themeToggleBtn.title = 'Switch to Dark Mode';
-        }
+        themeToggleBtns.forEach(btn => {
+            if (theme === 'dark') {
+                btn.innerHTML = '☀️'; // Sun icon for light option
+                btn.title = 'Switch to Light Mode';
+            } else {
+                btn.innerHTML = '🌙'; // Moon icon for dark option
+                btn.title = 'Switch to Dark Mode';
+            }
+        });
     }
 
     // RTL Toggle logic
-    const rtlToggleBtn = document.getElementById('rtl-toggle');
+    const rtlToggleBtns = document.querySelectorAll('.rtl-toggle');
     const currentDir = localStorage.getItem('dir') || 'ltr';
     document.body.setAttribute('dir', currentDir);
     updateRtlButton(currentDir);
 
-    if (rtlToggleBtn) {
-        rtlToggleBtn.addEventListener('click', () => {
+    rtlToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             let dir = document.body.getAttribute('dir');
             let newDir = dir === 'rtl' ? 'ltr' : 'rtl';
             document.body.setAttribute('dir', newDir);
             localStorage.setItem('dir', newDir);
             updateRtlButton(newDir);
         });
-    }
+    });
 
     function updateRtlButton(dir) {
-        if (!rtlToggleBtn) return;
-        rtlToggleBtn.textContent = '⇄';
-        if (dir === 'rtl') {
-            rtlToggleBtn.title = 'Switch to Left to Right';
-        } else {
-            rtlToggleBtn.title = 'Switch to Right to Left';
-        }
+        rtlToggleBtns.forEach(btn => {
+            btn.textContent = '⇄';
+            if (dir === 'rtl') {
+                btn.title = 'Switch to Left to Right';
+            } else {
+                btn.title = 'Switch to Right to Left';
+            }
+        });
     }
 
     // Active navigation link highlighting
@@ -121,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Auto-close sidebar on item click on mobile
     sidebarItems.forEach(item => {
         item.addEventListener('click', () => {
-            if (window.innerWidth <= 1024 && sidebar) {
+            if (window.innerWidth <= 992 && sidebar) {
                 sidebar.classList.remove('active');
             }
         });

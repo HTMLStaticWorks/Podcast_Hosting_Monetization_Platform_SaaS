@@ -29,15 +29,15 @@
             <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';" style="display:flex; flex-direction:column; gap:1.25rem;">
                 <div>
                     <label style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">Creator Name</label>
-                    <input type="text" required placeholder="e.g. Sarah Mitchell" class="glass-card" style="width:100%; padding:0.75rem; background:var(--bg-tertiary); color:var(--text-primary); border-color:var(--border-color);">
+                    <input type="text" name="creator-name" autocomplete="off" required placeholder="e.g. Sarah Mitchell" class="glass-card" style="width:100%; padding:0.75rem; background:var(--bg-tertiary); color:var(--text-primary); border-color:var(--border-color);">
                 </div>
                 <div>
                     <label style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">Podcast Show Title</label>
-                    <input type="text" required placeholder="e.g. The Daily Tech Lab" class="glass-card" style="width:100%; padding:0.75rem; background:var(--bg-tertiary); color:var(--text-primary); border-color:var(--border-color);">
+                    <input type="text" name="show-title" autocomplete="off" required placeholder="e.g. The Daily Tech Lab" class="glass-card" style="width:100%; padding:0.75rem; background:var(--bg-tertiary); color:var(--text-primary); border-color:var(--border-color);">
                 </div>
                 <div>
                     <label style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">Email Address</label>
-                    <input type="email" required placeholder="you@example.com" class="glass-card" style="width:100%; padding:0.75rem; background:var(--bg-tertiary); color:var(--text-primary); border-color:var(--border-color);">
+                    <input type="email" name="email" autocomplete="off" required placeholder="you@example.com" class="glass-card" style="width:100%; padding:0.75rem; background:var(--bg-tertiary); color:var(--text-primary); border-color:var(--border-color);">
                 </div>
                 <div>
                     <label style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">Password</label>
